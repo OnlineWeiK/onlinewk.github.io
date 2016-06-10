@@ -386,9 +386,1081 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/10/05/NPOI-DataTabal-to-Excel/" itemprop="url">
+                  C#中使用NPOI将DataTable导出到Excel文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-10-05T11:24:57+08:00" content="2015-10-05">
+              2015-10-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/开发/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>需要引入dll（可以选择.net2.0、.net3.5或者.net4.0的dll） <a href="http://download.csdn.net/detail/wwk0125/9156829">点击下载DLL</a><br><a href="http://www.cnblogs.com/Areas/archive/2012/06/26/2563139.html">Npoi使用手册</a></p>
+<h2 id="NpoiExcel-cs-类"><a href="#NpoiExcel-cs-类" class="headerlink" title="NpoiExcel.cs 类"></a>NpoiExcel.cs 类</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/10/05/NPOI-DataTabal-to-Excel/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/06/02/opencv-common-functions/" itemprop="url">
+                  OpenCV中常用函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-06-02T11:15:42+08:00" content="2015-06-02">
+              2015-06-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/OpenCV/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCV</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="函数-fgets"><a href="#函数-fgets" class="headerlink" title="函数: fgets()"></a>函数: fgets()</h2><h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">int</span> bufsize, FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>*buf: 字符型指针，指向用来存储所得数据的地址。</li>
+<li>bufsize: 整型数据，指明存储数据的大小。</li>
+<li><p>*stream: 文件结构体指针，将要读取的文件流。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3></li>
+<li><p>成功，则返回第一个参数buf；</p>
+</li>
+<li>在读字符时遇到end-of-file，则eof指示器被设置，如果还没读入任何字符就遇到这种情况，则buf保持原来的内容，返回NULL；</li>
+<li>如果发生读入错误，error指示器被设置，返回NULL，buf的值可能被改变</li>
+</ul>
+<h2 id="函数-rewind"><a href="#函数-rewind" class="headerlink" title="函数: rewind()"></a>函数: rewind()</h2><h3 id="功-能"><a href="#功-能" class="headerlink" title="功 能"></a>功 能</h3><ul>
+<li>将文件内部的位置指针重新指向一个流（数据流/文件）的开头</li>
+</ul>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
+<li>不是文件指针而是文件内部的位置指针，随着对文件的读写文件的位置指针（指向当前读写字节）向后移动。而文件指针是指向整个文件，如果不重新赋值文件指针不会改变。 </li>
+<li>rewind函数作用等同于 (void)fseek(stream, 0L, SEEK_SET);[1]</li>
+</ul>
+<h3 id="用-法"><a href="#用-法" class="headerlink" title="用 法:"></a>用 法:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="头文件："><a href="#头文件：" class="headerlink" title="头文件："></a>头文件：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stdio.h</span><br></pre></td></tr></table></figure>
+<h3 id="返回值："><a href="#返回值：" class="headerlink" title="返回值："></a>返回值：</h3><ul>
+<li>无</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/05/03/call-value-in-Csharp/" itemprop="url">
+                  asp.net中前台调用后台变量，C#后台调用前台jquery
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-05-03T11:53:22+08:00" content="2015-05-03">
+              2015-05-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>主要实现在页面跳转时将后台的一个参数通过URL传到其他页面</p>
+<h2 id="前台Html代码"><a href="#前台Html代码" class="headerlink" title="前台Html代码"></a>前台Html代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn  btn-inverse"</span> <span class="attr">href</span>=<span class="string">"JobEdit.aspx?Id=&lt;%=nJobId %&gt;"</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="C-后台代码"><a href="#C-后台代码" class="headerlink" title="C#后台代码"></a>C#后台代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> uint nJobId;<span class="comment">//全局变量 且要在 Page_Load中对其进行赋值</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Page_Load</span><span class="params">(object sender, EventArgs e)</span></span><br><span class="line"> </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (!IsPostBack)&#123;</span><br><span class="line">      nJobId = Convert.ToUInt32(Request.QueryString[<span class="string">"Id"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>C#后台调用前台jquery代码</p>
+<h2 id="C-后台代码-1"><a href="#C-后台代码-1" class="headerlink" title="C#后台代码"></a>C#后台代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">btnSaveBasicInfo_Click</span><span class="params">(object sender,EventArgs e)</span></span><br><span class="line">  </span>&#123;</span><br><span class="line">      ClientScript.RegisterStartupScript(<span class="keyword">this</span>.GetType(),<span class="string">"script"</span>, <span class="string">"change(2);"</span>, <span class="literal">true</span>); </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="前台jquery代码"><a href="#前台jquery代码" class="headerlink" title="前台jquery代码"></a>前台jquery代码</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/05/03/call-value-in-Csharp/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/05/02/Js-Select-via-cshar/" itemprop="url">
+                  js 实现对Select动态赋值 C#从后台获取
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-05-02T19:41:22+08:00" content="2015-05-02">
+              2015-05-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="js-代码"><a href="#js-代码" class="headerlink" title="js 代码"></a>js 代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">  $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> Annuals = $(<span class="string">"#txtAnnual"</span>);</span><br><span class="line">    <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">var</span> year = today.getFullYear();</span><br><span class="line">    Annuals.empty();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=year<span class="number">-1</span>;i&lt;=year+<span class="number">1</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> option = $(<span class="string">"&lt;option&gt;"</span>).text(i+<span class="string">'年'</span>).val(i)</span><br><span class="line">    Annuals.append(option);</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;)</span><br><span class="line"> &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Html代码"><a href="#Html代码" class="headerlink" title="Html代码"></a>Html代码</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/05/02/Js-Select-via-cshar/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/04/14/Js-add-and-delete-Table-line/" itemprop="url">
+                  Js实现动态添加删除Table行
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-14T14:29:31+08:00" content="2014-04-14">
+              2014-04-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近做项目遇到要动态添加、删除表格行的操作，代码实现如下</p>
+<h2 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>  <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span>  <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"margin:auto; width:96%;"</span> <span class="attr">id</span>=<span class="string">"LearnInfoItem"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span> &gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"8"</span> <span class="attr">bgcolor</span>=<span class="string">"#96E0E2"</span> <span class="attr">style</span>=<span class="string">"height:30px;"</span> &gt;</span><span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">"text-align:center; margin:0;"</span>&gt;</span>主要学习简历<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span> <span class="attr">id</span>=<span class="string">"tr1"</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>起讫时间 <span class="tag">&lt;/<span class="name">td</span>&gt;</span>                          </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>毕业院校<span class="tag">&lt;/<span class="name">td</span>&gt;</span>                        </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>所学专业<span class="tag">&lt;/<span class="name">td</span>&gt;</span>                          </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>学制<span class="tag">&lt;/<span class="name">td</span>&gt;</span>             </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>学位<span class="tag">&lt;/<span class="name">td</span>&gt;</span>             </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>学习方式<span class="tag">&lt;/<span class="name">td</span>&gt;</span>               </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span>文化程度<span class="tag">&lt;/<span class="name">td</span>&gt;</span>               </span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span>  <span class="attr">class</span>=<span class="string">"tdStyle2"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"LearnAdd"</span> <span class="attr">value</span>=<span class="string">"添加"</span> <span class="attr">onclick</span>=<span class="string">"LearnAddSignRow()"</span>  /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">'LearnTRLastIndex'</span> <span class="attr">type</span>=<span class="string">'hidden'</span> <span class="attr">id</span>=<span class="string">'LearnTRLastIndex'</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">               </span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/04/14/Js-add-and-delete-Table-line/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/04/09/CSS-and-memu/" itemprop="url">
+                  CSS实现菜单栏制作，鼠标经过变色
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-09T21:17:39+08:00" content="2014-04-09">
+              2014-04-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="xml"></span><br><span class="line"></span><br><span class="line">    #navigation</span><br><span class="line">    &#123;</span><br><span class="line">    	width:200px;</span><br><span class="line">    	font-family:Arial;</span><br><span class="line">    	&#125;</span><br><span class="line">    #navigation ul</span><br><span class="line">    &#123;</span><br><span class="line">    	list-style-type:none;                 /* 不显示项目符号*/</span><br><span class="line">    	margin:0px;</span><br><span class="line">    	padding:0px;</span><br><span class="line">    	text-decoration:none;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	#navigation li</span><br><span class="line">    	&#123;</span><br><span class="line">    		 border-bottom:1px solid #ED9F9F;  /* 添加标签<span class="tag">&lt;<span class="name">li</span>&gt;</span>的下划线*/</span><br><span class="line">    		&#125;</span><br><span class="line">    		</span><br><span class="line">    	#navigation li a</span><br><span class="line">    	&#123;</span><br><span class="line">    	 display:block;                       /* 区块显示*/</span><br><span class="line">    	 padding:5px 5px 5px 0.5em;</span><br><span class="line">    	 text-decoration:none;</span><br><span class="line">    	 border-left:12px solid #711515;      /* 左边的粗红边*/</span><br><span class="line">    	 border-right:1px solid #711515;      /* 右侧阴影*/</span><br><span class="line">    		&#125;</span><br><span class="line"></span><br><span class="line">    	#navigation li a:link,#navigation li a:visited /* 超链接正常状态、被访问过的状态*/</span><br><span class="line">    	&#123;</span><br><span class="line">    		 background-color:#c11136;            /* 设置背景色*/</span><br><span class="line">    		 color:#FFFFFF;                       /* 设置文字颜色*/ </span><br><span class="line">    		&#125;</span><br><span class="line">    	#navigation li a:hover      /*鼠标经过时*/</span><br><span class="line">    	&#123;</span><br><span class="line">    		 background-color:#990020;  /* 改变背景色*/</span><br><span class="line">    		 color:#ffff00;             /* 改变文字颜色*/</span><br><span class="line">    		&#125;</span><br><span class="line">   </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/04/09/CSS-and-memu/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2012/07/18/daily-in-summer/" itemprop="url">
+                  2012年暑期小记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2012-07-18T23:41:45+08:00" content="2012-07-18">
+              2012-07-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>   现在每天的生活感觉很充实，终于有时间来做自己喜欢的和一直想做的事情，背背单词，看看自己喜欢的小说，在图书馆待上一整天，偶尔发发呆，听听歌。中午水饭足饭（木有酒）后看看宫崎骏的动画，听听幸福课，累的时候趴下休息，渴的时候喝点kate给的菊花茶而且还加冰糖，偶尔呢，看看美女帅哥们奋斗的样子。有时不定时的能感觉到Hale睡觉时脚突然一蹬，然后我旁边睡觉的人突然的就醒了（一蹬惊醒梦中人啊），
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2012/07/18/daily-in-summer/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/07/28/Petya-and-Java/" itemprop="url">
+                  Petya and Java
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-07-28T23:10:23+08:00" content="2011-07-28">
+              2011-07-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/codeforces/" itemprop="url" rel="index">
+                    <span itemprop="name">codeforces</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="http://codeforces.com/problemset/problem/66/A">Petya and Java</a></p>
+<p>以前没真正弄明白函数strcmp的具体用途，以为只能比较字符，原来比较字符就是比较ASCLL码，！！也就是可以比较数字大小（当然是在位数同样的前提下），这样的话，先判断位数在进行比较！</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2011/07/28/Petya-and-Java/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/07/27/Sum-of-Divisors/" itemprop="url">
+                  Sum of Divisors
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-07-27T23:17:23+08:00" content="2011-07-27">
+              2011-07-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hust/" itemprop="url" rel="index">
+                    <span itemprop="name">hust</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p><code>For an integer n, define f(n) to be the sum of its proper divisors (the divisors excluding the number itself), f is called the restricted divisor function.
+Given an integer m. Find how many integers n between 1 and 1000000 (inclusively) has f(n)&lt;=m.</code></p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p><code>The input contains several cases, each has a single integer m on a seperate line. All input data fit in a signed 32-bit integer.</code></p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p><code>The answer for each case should be printed on a seperate line.</code>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2011/07/27/Sum-of-Divisors/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -427,7 +1499,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -435,7 +1507,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -444,7 +1516,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

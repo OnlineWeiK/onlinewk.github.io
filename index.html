@@ -104,8 +104,8 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: '博主'
+      userId: 6294835905345619000,
+      author: '博主小哥'
     }
   };
 </script>
@@ -330,6 +330,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/09/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -351,10 +358,7 @@
       
         
           <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/06/09/hello-world/#more" rel="contents">
               阅读全文 &raquo;
@@ -448,6 +452,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/10/05/NPOI-DataTabal-to-Excel/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/05/NPOI-DataTabal-to-Excel/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -565,6 +576,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/06/02/opencv-common-functions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/02/opencv-common-functions/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -585,8 +603,7 @@
 
       
         
-          
-            <h2 id="函数-fgets"><a href="#函数-fgets" class="headerlink" title="函数: fgets()"></a>函数: fgets()</h2><h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">int</span> bufsize, FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
+          <h2 id="函数-fgets"><a href="#函数-fgets" class="headerlink" title="函数: fgets()"></a>函数: fgets()</h2><h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">int</span> bufsize, FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
 <li>*buf: 字符型指针，指向用来存储所得数据的地址。</li>
 <li>bufsize: 整型数据，指明存储数据的大小。</li>
@@ -597,20 +614,12 @@
 <li>在读字符时遇到end-of-file，则eof指示器被设置，如果还没读入任何字符就遇到这种情况，则buf保持原来的内容，返回NULL；</li>
 <li>如果发生读入错误，error指示器被设置，返回NULL，buf的值可能被改变</li>
 </ul>
-<h2 id="函数-rewind"><a href="#函数-rewind" class="headerlink" title="函数: rewind()"></a>函数: rewind()</h2><h3 id="功-能"><a href="#功-能" class="headerlink" title="功 能"></a>功 能</h3><ul>
-<li>将文件内部的位置指针重新指向一个流（数据流/文件）的开头</li>
-</ul>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
-<li>不是文件指针而是文件内部的位置指针，随着对文件的读写文件的位置指针（指向当前读写字节）向后移动。而文件指针是指向整个文件，如果不重新赋值文件指针不会改变。 </li>
-<li>rewind函数作用等同于 (void)fseek(stream, 0L, SEEK_SET);[1]</li>
-</ul>
-<h3 id="用-法"><a href="#用-法" class="headerlink" title="用 法:"></a>用 法:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
-<h3 id="头文件："><a href="#头文件：" class="headerlink" title="头文件："></a>头文件：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stdio.h</span><br></pre></td></tr></table></figure>
-<h3 id="返回值："><a href="#返回值：" class="headerlink" title="返回值："></a>返回值：</h3><ul>
-<li>无</li>
-</ul>
-
-          
+<h2 id="函数-rewind"><a href="#函数-rewind" class="headerlink" title="函数: rewind()"></a>函数: rewind()</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/02/opencv-common-functions/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -699,6 +708,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/05/03/call-value-in-Csharp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/03/call-value-in-Csharp/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -820,6 +836,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/05/02/Js-Select-via-cshar/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/02/Js-Select-via-cshar/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -935,6 +958,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/14/Js-add-and-delete-Table-line/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/14/Js-add-and-delete-Table-line/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1052,6 +1082,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/09/CSS-and-memu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/09/CSS-and-memu/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1166,8 +1203,6 @@
           
 
           
-            
-          
 
           
 
@@ -1281,6 +1316,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/07/28/Petya-and-Java/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/07/28/Petya-and-Java/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1398,6 +1440,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/07/27/Sum-of-Divisors/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/07/27/Sum-of-Divisors/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1588,7 +1637,10 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div style="text-align:center">
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -1599,15 +1651,23 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
-<div class="theme-info">
-  主题 -
+<div class="powered-by">
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
 </div>
+
+<div class="theme-info">
+Total visited <span id="busuanzi_container_site_pv">
+    <span id="busuanzi_value_site_pv"></span></span> times.  
+</div>
+</div>
+
+
 
         
 
@@ -1682,9 +1742,32 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"onlinewk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
 
 
 

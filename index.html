@@ -209,16 +209,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
 
       
         <li class="menu-item menu-item-search">
@@ -238,8 +228,9 @@
   
     <div class="site-search">
       
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-default-search-input st-search-input" />
 </form>
 
 <script type="text/javascript">
@@ -667,6 +658,129 @@
             
               
                 
+                <a class="post-title-link" href="/2015/05/25/uploadPic-asynchronous-via-JsAndIframe/" itemprop="url">
+                  C#中使用iframe结合js实现图片异步上传
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-05-25T12:12:02+08:00" content="2015-05-25">
+              2015-05-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/05/25/uploadPic-asynchronous-via-JsAndIframe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/25/uploadPic-asynchronous-via-JsAndIframe/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>将图片上传的页面放在iframe中，通过iframe跳转到另一个页面，在该页中将图片提交到服务器，而不需要对主页进行刷新，提交成功后用脚本（回调函数）实现上传的图片在主页面的显示。</p>
+<h2 id="图片选择页面-Add-aspx"><a href="#图片选择页面-Add-aspx" class="headerlink" title="图片选择页面 Add.aspx"></a>图片选择页面 Add.aspx</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/05/25/uploadPic-asynchronous-via-JsAndIframe/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/05/03/call-value-in-Csharp/" itemprop="url">
                   asp.net中前台调用后台变量，C#后台调用前台jquery
                 </a>
@@ -739,9 +853,6 @@
           <p>主要实现在页面跳转时将后台的一个参数通过URL传到其他页面</p>
 <h2 id="前台Html代码"><a href="#前台Html代码" class="headerlink" title="前台Html代码"></a>前台Html代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"btn  btn-inverse"</span> <span class="attr">href</span>=<span class="string">"JobEdit.aspx?Id=&lt;%=nJobId %&gt;"</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="C-后台代码"><a href="#C-后台代码" class="headerlink" title="C#后台代码"></a>C#后台代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> uint nJobId;<span class="comment">//全局变量 且要在 Page_Load中对其进行赋值</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Page_Load</span><span class="params">(object sender, EventArgs e)</span></span><br><span class="line"> </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (!IsPostBack)&#123;</span><br><span class="line">      nJobId = Convert.ToUInt32(Request.QueryString[<span class="string">"Id"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>C#后台调用前台jquery代码</p>
-<h2 id="C-后台代码-1"><a href="#C-后台代码-1" class="headerlink" title="C#后台代码"></a>C#后台代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">btnSaveBasicInfo_Click</span><span class="params">(object sender,EventArgs e)</span></span><br><span class="line">  </span>&#123;</span><br><span class="line">      ClientScript.RegisterStartupScript(<span class="keyword">this</span>.GetType(),<span class="string">"script"</span>, <span class="string">"change(2);"</span>, <span class="literal">true</span>); </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="前台jquery代码"><a href="#前台jquery代码" class="headerlink" title="前台jquery代码"></a>前台jquery代码</h2>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/05/03/call-value-in-Csharp/#more" rel="contents">
               阅读全文 &raquo;
@@ -1378,131 +1489,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2011/07/27/Sum-of-Divisors/" itemprop="url">
-                  Sum of Divisors
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2011-07-27T23:17:23+08:00" content="2011-07-27">
-              2011-07-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hust/" itemprop="url" rel="index">
-                    <span itemprop="name">hust</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2011/07/27/Sum-of-Divisors/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/07/27/Sum-of-Divisors/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p><code>For an integer n, define f(n) to be the sum of its proper divisors (the divisors excluding the number itself), f is called the restricted divisor function.
-Given an integer m. Find how many integers n between 1 and 1000000 (inclusively) has f(n)&lt;=m.</code></p>
-<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p><code>The input contains several cases, each has a single integer m on a seperate line. All input data fit in a signed 32-bit integer.</code></p>
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p><code>The answer for each case should be printed on a seperate line.</code>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2011/07/27/Sum-of-Divisors/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1548,7 +1534,7 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1565,7 +1551,7 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1597,20 +1583,11 @@ Given an integer m. Find how many integers n between 1 and 1000000 (inclusively)
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.douban.com/people/onlinewk" target="_blank" title="豆瓣">
+                <a href="http://weibo.com/onlinewk" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  豆瓣
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/onlinewk" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  微博
+                  Weibo
                 </a>
               </span>
             
@@ -1774,6 +1751,135 @@ Total visited <span id="busuanzi_container_site_pv">
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
   
 
   

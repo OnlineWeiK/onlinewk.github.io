@@ -96,7 +96,7 @@ function timeElapse(togetherDate){
 	var current = new Date();
 	
 	$("#current").html("*"+current.Format("yyyy-MM-dd"));
-	var seconds = (Date.parse(current) - Date.parse(togetherDate)) / 1000;
+	var seconds = (current.getTime() - new Date(togetherDate).getTime()) / 1000;
 	var days = Math.floor(seconds / (3600 * 24));
 	seconds = seconds % (3600 * 24);
 	var hours = Math.floor(seconds / 3600);
@@ -108,7 +108,7 @@ function timeElapse(togetherDate){
 	if (minutes < 10) {
 		minutes = "0" + minutes;
 	}
-	seconds = seconds % 60;
+	seconds = Math.floor(seconds % 60);
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
